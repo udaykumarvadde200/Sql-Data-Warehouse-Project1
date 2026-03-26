@@ -4,13 +4,13 @@
 
 This project demonstrates the design and implementation of a **scalable data warehouse** using the **Medallion Architecture (Bronze, Silver, Gold layers)**.
 
-The pipeline extracts data from source systems, performs transformations, and loads it into structured layers for analytics and reporting.
+The pipeline extracts raw data, performs transformations, and delivers **business-ready analytics datasets**.
 
 ---
 
 ## 🏗️ Architecture
 
-The project follows a **layered data engineering approach**:
+![Architecture](docs/data_architecture.png)
 
 ```text
 Source Data → Bronze → Silver → Gold → Analytics
@@ -83,7 +83,19 @@ Run scripts in the following order:
 * Implemented **Star Schema**
 
   * Fact Tables → Sales data
-  * Dimension Tables → Customer, Product, etc.
+  * Dimension Tables → Customer, Product
+
+---
+
+## 📊 Sample Output
+
+```sql
+SELECT * FROM gold.fact_sales;
+```
+
+| order_number | customer_key | product_key | sales_amount |
+| ------------ | ------------ | ----------- | ------------ |
+| 1001         | 1            | 10          | 5000         |
 
 ---
 
@@ -98,14 +110,24 @@ This warehouse enables:
 
 ---
 
+## 🧪 Data Quality Validation
+
+The project includes SQL-based quality checks to ensure:
+
+* No duplicate or null keys
+* Valid date ranges
+* Consistent business logic (sales = quantity × price)
+* Clean and standardized data
+
+---
+
 ## ⚠️ Setup Note
 
 Update file paths in `proc_load_bronze.sql` before execution:
 
 ```sql
 -- Replace with your local dataset path
-BULK INSERT table_name
-FROM 'your_file_path.csv'
+SET @base_path = 'your_project_path\datasets\';
 ```
 
 ---
