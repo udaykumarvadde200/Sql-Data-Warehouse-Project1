@@ -91,4 +91,3 @@ SELECT * FROM gold.fact_sales;
 -1001	        1	            10	        5000
 
 
-```
