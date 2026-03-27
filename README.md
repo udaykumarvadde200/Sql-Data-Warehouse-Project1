@@ -40,7 +40,6 @@ Source Data → Bronze → Silver → Gold → Analytics
 - ✅ Modular and scalable SQL scripts
 
 ---
-
 ## 📂 Project Structure
 This section outlines the organization of the project files and directories:
 
@@ -58,40 +57,31 @@ Sql-Data-Warehouse-Project1/
 │   ├── proc_load_gold.sql     # Stored procedure to load Gold layer
 ├── tests/             # Data quality validation queries
 └── README.md          # Project documentation
+---
+🔄 Execution Flow
 
-## 🔄 Execution Flow
 Run the scripts in the following order:
 
-1. init.sql  
-2. ddl_bronze.sql  
-3. proc_load_bronze.sql  
-4. ddl_silver.sql  
-5. proc_load_silver.sql  
-6. ddl_gold.sql  
-7. Data quality checks  
-
+init.sql
+ddl_bronze.sql
+proc_load_bronze.sql
+ddl_silver.sql
+proc_load_silver.sql
+ddl_gold.sql
+Data quality checks
 ---
+📊 Data Modeling
 
-## 📊 Data Modeling
-Implemented **Star Schema**:
+Implemented Star Schema:
 
-- **Fact Tables** → Sales data  
-- **Dimension Tables** → Customer, Product  
-
+Fact Tables → Sales data
+Dimension Tables → Customer, Product
 ---
-
-## 📊 Sample Output
-
-```sql
+📊 Sample Output
 SELECT * FROM gold.fact_sales;
-
-| order_number | customer_key | product_key | sales_amount |
-| ------------ | ------------ | ----------- | ------------ |
-| 1001         | 1            | 10          | 5000         |
-
-
-
-📈 Business Use Case
+order_number	customer_key	product_key	sales_amount
+1001	        1	            10	          5000
+---📈 Business Use Case
 
 This data warehouse enables:
 
@@ -107,11 +97,13 @@ No duplicate or null keys
 Valid date ranges
 Consistent business logic (sales = quantity × price)
 Clean and standardized data
+---
 ⚠️ Setup Note
 
 Update file paths in proc_load_bronze.sql before execution:
-
 SET @base_path = 'your_project_path\datasets\';
+
+---
 🧠 Key Learnings
 Designed scalable data pipelines using Medallion Architecture
 Built ETL workflows using T-SQL
@@ -130,3 +122,4 @@ This project is licensed under the MIT License.
 
 Uday Kumar
 Aspiring Software Engineer | Data Enthusiast
+
