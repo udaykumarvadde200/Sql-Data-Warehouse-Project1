@@ -41,6 +41,7 @@ Source Data → Bronze → Silver → Gold → Analytics
 
 ---
 
+```markdown
 ## 📂 Project Structure
 This section outlines the organization of the project files and directories:
 
