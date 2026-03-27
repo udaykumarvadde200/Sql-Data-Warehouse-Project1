@@ -85,3 +85,8 @@ Implemented **Star Schema**:
 
 ```sql
 SELECT * FROM gold.fact_sales;
+```
+| order_number | customer_key | product_key | sales_amount |
+| ------------ | ------------ | ----------- | ------------ |
+| 1001         | 1            | 10          | 5000         |
+
