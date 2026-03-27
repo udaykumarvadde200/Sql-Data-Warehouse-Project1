@@ -91,11 +91,31 @@ SELECT * FROM gold.fact_sales;
 | 1001         | 1            | 10          | 5000         |
 
 
-📈 Business Use Case
+## 📈 Business Use Case
 
 This data warehouse enables:
 
-📊 Sales performance analysis
-👤 Customer behavior insights
-📦 Product-level analytics
-📉 Efficient reporting and dashboard integration
+- 📊 Sales performance analysis  
+- 👤 Customer behavior insights  
+- 📦 Product-level analytics  
+- 📉 Efficient reporting and dashboard integration  
+
+---
+
+## 🧪 Data Quality Validation
+
+The project includes SQL-based quality checks to ensure:
+
+- No duplicate or null keys  
+- Valid date ranges  
+- Consistent business logic (sales = quantity × price)  
+- Clean and standardized data  
+
+---
+
+## ⚠️ Setup Note
+
+Update file paths in `proc_load_bronze.sql` before execution:
+
+```sql
+SET @base_path = 'your_project_path\datasets\';
