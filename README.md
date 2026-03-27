@@ -123,13 +123,13 @@ SET @base_path = 'your_project_path\datasets\';
 ## 🧠 *Key Learnings*
 - Designed scalable data pipelines using Medallion Architecture
 - Built ETL workflows using T-SQL
-Implemented Star Schema for analytical querying
-Applied data validation and quality checks
+- Implemented Star Schema for analytical querying
+- Applied data validation and quality checks
 ## 🚀 *Future Improvements*
-Implement incremental data loading
-Automate pipeline using Airflow / Azure Data Factory
-Integrate BI dashboards (Power BI / Tableau)
-Optimize query performance
+- Implement incremental data loading
+- Automate pipeline using Airflow / Azure Data Factory
+- Integrate BI dashboards (Power BI / Tableau)
+- Optimize query performance
 ## 📜 *License*
 
 This project is licensed under the MIT License.
