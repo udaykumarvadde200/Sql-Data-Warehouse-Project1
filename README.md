@@ -58,19 +58,36 @@ Sql-Data-Warehouse-Project1/
 ├── tests/             # Data quality validation queries
 └── README.md          # Project documentation
 ```
-##🔄 Execution Flow
+## 🔄 Execution Flow
 
 Run the scripts in the following order:
 
-1.init.sql
-2.ddl_bronze.sql
-3.proc_load_bronze.sql
-4.ddl_silver.sql
-5.proc_load_silver.sql
-6.ddl_gold.sql
-7.Data quality checks
+1. init.sql  
+2. ddl_bronze.sql  
+3. proc_load_bronze.sql  
+4. ddl_silver.sql  
+5. proc_load_silver.sql  
+6. ddl_gold.sql  
+7. Data quality checks  
 
+---
 
+## 📊 Data Modeling
+
+Implemented **Star Schema**:
+
+- **Fact Tables** → Sales data  
+- **Dimension Tables** → Customer, Product  
+
+---
+
+## 📊 Sample Output
+
+```sql
+SELECT * FROM gold.fact_sales;
+
+order_number	customer_key	product_key	sales_amount
+1001	1	10	5000
 
 
 ```
