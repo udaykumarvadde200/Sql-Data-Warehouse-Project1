@@ -41,7 +41,6 @@ Source Data → Bronze → Silver → Gold → Analytics
 
 ---
 
-```markdown
 ## 📂 Project Structure
 This section outlines the organization of the project files and directories:
 
@@ -59,25 +58,3 @@ Sql-Data-Warehouse-Project1/
 │   ├── proc_load_gold.sql     # Stored procedure to load Gold layer
 ├── tests/             # Data quality validation queries
 └── README.md          # Project documentation
-
-🔄 Execution Flow
-
-Run the scripts in the following order:
-
-init.sql
-ddl_bronze.sql
-proc_load_bronze.sql
-ddl_silver.sql
-proc_load_silver.sql
-ddl_gold.sql
-Data quality checks
-📊 Data Modeling
-
-Implemented Star Schema:
-
-Fact Tables → Sales data
-Dimension Tables → Customer, Product
-📊 Sample Output
-SELECT * FROM gold.fact_sales;
-order_number	customer_key	product_key	sales_amount
-1001	1	10	5000
