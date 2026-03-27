@@ -137,4 +137,4 @@ This project is licensed under the MIT License.
 ## 👨‍💻 *Author*
 
 Uday Kumar
-Aspiring Software Engineer | Data Enthusiast
+Aspiring Software Engineer | Data Analytics Enthusiast
