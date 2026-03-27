@@ -58,3 +58,75 @@ Sql-Data-Warehouse-Project1/
 │   ├── proc_load_gold.sql     # Stored procedure to load Gold layer
 ├── tests/             # Data quality validation queries
 └── README.md          # Project documentation
+
+## 🔄 Execution Flow
+Run the scripts in the following order:
+
+1. init.sql  
+2. ddl_bronze.sql  
+3. proc_load_bronze.sql  
+4. ddl_silver.sql  
+5. proc_load_silver.sql  
+6. ddl_gold.sql  
+7. Data quality checks  
+
+---
+
+## 📊 Data Modeling
+Implemented **Star Schema**:
+
+- **Fact Tables** → Sales data  
+- **Dimension Tables** → Customer, Product  
+
+---
+
+## 📊 Sample Output
+
+```sql
+SELECT * FROM gold.fact_sales;
+
+| order_number | customer_key | product_key | sales_amount |
+| ------------ | ------------ | ----------- | ------------ |
+| 1001         | 1            | 10          | 5000         |
+
+
+
+📈 Business Use Case
+
+This data warehouse enables:
+
+📊 Sales performance analysis
+👤 Customer behavior insights
+📦 Product-level analytics
+📉 Efficient reporting and dashboard integration
+🧪 Data Quality Validation
+
+The project includes SQL-based quality checks to ensure:
+
+No duplicate or null keys
+Valid date ranges
+Consistent business logic (sales = quantity × price)
+Clean and standardized data
+⚠️ Setup Note
+
+Update file paths in proc_load_bronze.sql before execution:
+
+SET @base_path = 'your_project_path\datasets\';
+🧠 Key Learnings
+Designed scalable data pipelines using Medallion Architecture
+Built ETL workflows using T-SQL
+Implemented Star Schema for analytical querying
+Applied data validation and quality checks
+🚀 Future Improvements
+Implement incremental data loading
+Automate pipeline using Airflow / Azure Data Factory
+Integrate BI dashboards (Power BI / Tableau)
+Optimize query performance
+📜 License
+
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+
+Uday Kumar
+Aspiring Software Engineer | Data Enthusiast
