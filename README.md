@@ -70,6 +70,8 @@ ddl_silver.sql
 proc_load_silver.sql
 ddl_gold.sql
 Data quality checks
+---
+
 📊 Data Modeling
 
 Implemented Star Schema:
