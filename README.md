@@ -90,11 +90,12 @@ SELECT * FROM gold.fact_sales;
 | ------------ | ------------ | ----------- | ------------ |
 | 1001         | 1            | 10          | 5000         |
 
-```📈 Business Use Case
+
+📈 Business Use Case
 
 This data warehouse enables:
 
 📊 Sales performance analysis
 👤 Customer behavior insights
 📦 Product-level analytics
-📉 Efficient reporting and dashboard integration```
+📉 Efficient reporting and dashboard integration
