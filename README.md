@@ -43,3 +43,40 @@ Source Data → Bronze → Silver → Gold → Analytics
 
 ## 📂 Project Structure
 This section outlines the organization of the project files and directories:
+
+```plaintext
+Sql-Data-Warehouse-Project1/
+├── datasets/          # Contains raw source data files (CSV format)
+├── docs/              # Includes architecture diagrams and documentation
+├── scripts/           # All SQL scripts organized by layers
+│   ├── bronze/        # Raw data ingestion scripts (BULK INSERT)
+│   ├── silver/        # Data cleaning and transformation scripts
+│   ├── gold/          # Analytical layer (fact & dimension tables)
+│   ├── init.sql       # Database and schema initialization
+│   ├── proc_load_bronze.sql   # Stored procedure to load Bronze layer
+│   ├── proc_load_silver.sql   # Stored procedure to load Silver layer
+│   ├── proc_load_gold.sql     # Stored procedure to load Gold layer
+├── tests/             # Data quality validation queries
+└── README.md          # Project documentation
+
+🔄 Execution Flow
+
+Run the scripts in the following order:
+
+init.sql
+ddl_bronze.sql
+proc_load_bronze.sql
+ddl_silver.sql
+proc_load_silver.sql
+ddl_gold.sql
+Data quality checks
+📊 Data Modeling
+
+Implemented Star Schema:
+
+Fact Tables → Sales data
+Dimension Tables → Customer, Product
+📊 Sample Output
+SELECT * FROM gold.fact_sales;
+order_number	customer_key	product_key	sales_amount
+1001	1	10	5000
