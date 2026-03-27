@@ -56,7 +56,7 @@ Sql-Data-Warehouse-Project1/
 │   ├── proc_load_silver.sql   # Stored procedure to load Silver layer
 │   ├── proc_load_gold.sql     # Stored procedure to load Gold layer
 ├── tests/             # Data quality validation queries
-└── README.md          # Project documentation
+└── README.md          # Project documentation```
 ---
 🔄 Execution Flow
 
